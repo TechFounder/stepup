@@ -1,0 +1,32 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <% if resource.errors.any? %>
+    <div class="alert alert-info">
+      <h4><%= pluralize(resource.errors.count, "error") %> prohibited this page from being saved:</h4>
+        <ul>
+          <% resource.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, :autofocus => true %></div>
+
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email %></div>
+
+  <% if f.object.password_required? %>
+    <div><%= f.label :password %><br />
+    <%= f.password_field :password %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></div>
+  <% end %>
+  <br />
+  <div><%= f.submit "Sign up", class: "btn btn-primary btn-sm" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

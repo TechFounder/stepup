@@ -1,0 +1,17 @@
+$navbar-default-bg: #95a5a6;
+$navbar-default-link-color: white;
+$btn-primary-bg: #7f8c8d;
+
+@import "bootstrap";
+
+body {
+	padding-top: 100px;
+}
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}

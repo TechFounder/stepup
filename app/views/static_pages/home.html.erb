@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+	<div class="jumbotron center">
+		<h1>Welcome <%= current_user.name %></h1>
+		<h3>Your email is <%= current_user.email %></h3>
+	</div>
+<% else %>
+	<div class="jumbotron center">
+		<h1>I love jumbotron!</h1>
+		Click here to
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %><p></p>
+		<p>
+			<%= link_to user_omniauth_authorize_path(:twitter) do %>
+				<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect with Twitter</button>
+			<% end %>
+			<%= link_to user_omniauth_authorize_path(:facebook) do %>
+				<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect with Facebook</button>
+			<% end %>
+			<%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
+				<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
+			<% end %>
+		</p>
+	</div>
+<% end %>
