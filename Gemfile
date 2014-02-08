@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 gem 'devise', '3.2.1'
-#gem 'simple_form', '~> 2.1.0'
+gem 'simple_form', '~> 3.0.1'
 gem 'annotate', ">=2.5.0"
 gem 'activeadmin', github: 'gregbell/active_admin'
 
@@ -38,7 +38,7 @@ gem 'turbolinks'
 
 # Gems used only for Production
 group :production do
-#gem 'pg'
+gem 'pg'
 end
 
 #Gems used for Development and Testing
