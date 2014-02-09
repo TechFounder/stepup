@@ -8,7 +8,7 @@ class CreateMentees < ActiveRecord::Migration
       t.string :events_attended
       t.string :extracurriculars
       t.integer :user_id
-      t.attchement :image
+      t.attachement :image
       t.references :user, index: true
 
       t.timestamps
