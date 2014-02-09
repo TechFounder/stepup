@@ -22,6 +22,10 @@ body {
 	border: none;
 	min-height: 0px;
 }
+.navbar-right .subheading {
+	text-indent: 6px;
+	letter-spacing: 7px;
+}
 .navbar_logo {
 	height: 128px;	
 	float: left;
@@ -30,7 +34,9 @@ body {
 	float: right;
 }
 #header-navigation {
-	background: #E05A01;
+	background: #E05A01;	
+	padding-left: 50px;
+	padding-right: 40px;
 
 }
 #header-navigation a {
