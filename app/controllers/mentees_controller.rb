@@ -23,6 +23,11 @@ class MenteesController < InheritedResources::Base
   def show
   end
 
+  def show
+    @mentee = Mentee.find(params[:id])
+    # @message = @mentee.messages.build
+  end
+
   # GET /mentees/1/edit
   def edit
     if current_user.profile_type == 'Mentee'
