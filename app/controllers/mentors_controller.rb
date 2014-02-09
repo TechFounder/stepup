@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-class MentorsController < InheritedResources::Base
-=======
 class MentorsController < ApplicationController
 	before_filter :authenticate_user!
 
@@ -13,5 +10,5 @@ class MentorsController < ApplicationController
   		@mentors = User.mentor
   	end
   end
->>>>>>> b38bdda409368f885c20a155405578bfb69fdf97
+  
 end
