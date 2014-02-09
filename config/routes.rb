@@ -1,6 +1,7 @@
 Stepup::Application.routes.draw do
   resources :messages
 
+  get 'mentors' => 'mentors#search'
   get 'mentors/search'
   get 'mentors/edit'
   resources :mentors
