@@ -12,9 +12,9 @@
 <% @mentors.each do |mentor| %>
 	<div class="row search_results">
 	  <% if mentor.image_file_name %>
-		  <img src="<%= mentor.image_file_name %>">
+		  <img src="<%= mentor.image(:thumb) %>" class="search_results_image">
 		<% else %>
-		  <div style="width:100px;height:100px;background-color:gray;float:left;" class="search_results_image"></div>
+		  <div style="width:133px;height:100px;background-color:gray;float:left;" class="search_results_image"></div>
 		<% end %>
 		<h1><%= mentor.user.name %></h1>
 		<span><%= mentor.job_title %></span>
