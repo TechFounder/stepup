@@ -16,7 +16,7 @@ gem "omniauth-google-oauth2"
 
 # Images
 gem 'paperclip', "~> 3.0"
-#gem 'aws-sdk'
+gem 'aws-sdk', '~> 1.29.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -44,6 +44,7 @@ gem 'turbolinks'
 # Gems used only for Production
 group :production do
 gem 'pg'
+# gem 'rails_12factor'
 end
 
 #Gems used for Development and Testing
