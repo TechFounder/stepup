@@ -30,10 +30,10 @@ class MentorsController < ApplicationController
 
   # POST /mentors
   def create
-    mentor = Mentor.new(mentor_params)
-    if mentor.save
+    @mentor = Mentor.new(mentor_params)
+    if @mentor.save
       current_user.profile.destroy! if current_user.profile
-      current_user.profile = mentor
+      current_user.profile = @mentor
       current_user.save!
       redirect_to root_path, notice: 'Your profile was successfully created.'
     else
