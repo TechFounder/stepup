@@ -1,4 +1,4 @@
 <%= simple_form_for [@message] do |f| %>
-  <%= f.input :message, label: "Reach out to Step Up to tell them your interest" %><br/>
-  <%= f.submit 'Send Message' %>
+  <%= f.input :message, placeholder: "Reach out to Step Up to tell them your interest" %>
+  <p id="send_message_button"><%= f.submit 'Send Message' %></p>
 <% end %><br/>
