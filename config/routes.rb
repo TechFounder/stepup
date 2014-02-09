@@ -1,6 +1,8 @@
 Stepup::Application.routes.draw do
   resources :messages
 
+  get 'choose_role' => 'application#choose_role', as: 'choose_role'
+
   get 'mentors' => 'mentors#search'
   get 'mentors/search'
   get 'mentors/edit'
