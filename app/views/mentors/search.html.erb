@@ -1,8 +1,8 @@
 <h1>Mentor Search</h1>
 
-<%= form_tag method: :get do %>
+<%= form_tag(nil, method: :get) do %>
   <p>You can search by company, skills or industry to find mentors which match your interests.</p>
-	<%= text_field_tag :query %>
+	<%= text_field_tag "query" %>
 	<%= submit_tag 'Search' %>
 <% end %>
 
@@ -10,6 +10,8 @@
 	<p>MENTOR: <%= mentor.name %></p>
 <% end %>
 
-<% if @mentors.empty? %>
+<% if @mentors.empty? && @is_search_results %>
+  <p>No results found.</p>
+<% elsif @mentors.empty? %>
   <p>No mentors to display.</p>
 <% end %>
