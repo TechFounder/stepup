@@ -7,7 +7,6 @@ class CreateMentees < ActiveRecord::Migration
       t.string :bio
       t.string :events_attended
       t.string :extracurriculars
-      t.integer :user_id
       t.attachment :image
       t.references :user, index: true
 

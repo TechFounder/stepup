@@ -11,9 +11,8 @@ class CreateMentors < ActiveRecord::Migration
       t.string :internship_job_title
       t.text :internship_skill_set
       t.text :internship_additional_info
-      t.integer :user_id
       t.attachment :image
-      t.references :user, index: true
+
 
       t.timestamps
     end
