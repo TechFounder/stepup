@@ -93,13 +93,13 @@ ActiveRecord::Schema.define(version: 20140209152340) do
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "name",                              default: "",    null: false
-    t.string   "email",                             default: "",    null: false
-    t.string   "encrypted_password",                default: "",    null: false
+    t.string   "name",                   default: "", null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                     default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -108,24 +108,6 @@ ActiveRecord::Schema.define(version: 20140209152340) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "mentor_company_name"
-    t.string   "mentor_job_title"
-    t.string   "mentor_sector"
-    t.string   "mentor_college"
-    t.text     "mentor_skill_set"
-    t.text     "mentor_additional_info"
-    t.boolean  "mentor_internship_available"
-    t.string   "mentor_internship_job_title"
-    t.text     "mentor_internship_skill_set"
-    t.text     "mentor_internship_additional_info"
-    t.text     "mentee_school_name"
-    t.integer  "mentee_grade"
-    t.text     "mentee_career_interests"
-    t.text     "mentee_bio"
-    t.text     "mentee_events_attended"
-    t.text     "mentee_extracurriculars"
-    t.boolean  "is_mentor",                         default: false
-    t.string   "image_file_name"
     t.integer  "profile_id"
     t.string   "profile_type"
   end
