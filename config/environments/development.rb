@@ -27,6 +27,9 @@ Stepup::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Lets Paperclip know where to look for ImageMagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # Defined default mailer URL
   config.action_mailer.default_url_options = { :host => ENV["DEV_MAILER_HOST"] }
 end
