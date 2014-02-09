@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if @mentee.image_file_name %>
+  <p><%= image_tag @mentee.image(:medium) %></p>
+<% end %>
+
 <p>
   <strong>School name:</strong>
   <%= @mentee.school_name %>
