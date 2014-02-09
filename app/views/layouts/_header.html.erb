@@ -28,15 +28,24 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <%= link_to "Sign up", new_user_registration_path, 
-            class: "btn btn-default btn-xs",
-            role: "button", 
-            id:"header_signup_button" %>
-          <%= link_to "Sign In", 
-            new_user_session_path, 
-            class: "btn btn-default btn-xs", 
+          <% if !user_signed_in? %>
+            <%= link_to "Sign up", new_user_registration_path, 
+              class: "btn btn-default btn-xs",
               role: "button", 
-              id:"header_signin_button" %>
+              id:"header_signup_button" %>
+            <%= link_to "Sign In", 
+              new_user_session_path, 
+              class: "btn btn-default btn-xs", 
+                role: "button", 
+                id:"header_signin_button" %>
+          <% else %>
+            <%= link_to "Sign Out", 
+              destroy_user_session_path, 
+              class: "btn btn-default btn-xs", 
+                role: "button", 
+                id:"header_signout_button",
+                method: :delete %>
+          <% end %>
 
           <ul class="dropdown-menu">
             <% unless user_signed_in? %>

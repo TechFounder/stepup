@@ -71,7 +71,7 @@ body {
 	margin-top: 20px;
 }
 
-#header_signup_button, #header_signin_button {
+#header_signup_button, #header_signin_button, #header_signout_button {
 	display:inline-block;
 	height:24px;
 	line-height: 0px;
@@ -84,6 +84,10 @@ body {
 	background: white;
 }
 #header_signin_button {
+	color: white;
+	background: orange;
+}
+#header_signout_button {
 	color: white;
 	background: orange;
 }
