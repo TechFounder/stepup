@@ -4,6 +4,7 @@ Stepup::Application.routes.draw do
   get 'mentors/search'
   resources :mentors
 
+  get 'mentees/search'
   resources :mentees
 
   devise_for :admin_users, ActiveAdmin::Devise.config

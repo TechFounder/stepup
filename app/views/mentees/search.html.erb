@@ -1,0 +1,17 @@
+<h1>Mentee Search</h1>
+
+<%= form_tag(nil, method: :get) do %>
+  <p>You can search by LOTS OF STUFF.</p>
+	<%= text_field_tag "query" %>
+	<%= submit_tag 'Search' %>
+<% end %>
+
+<% @mentees.each do |mentee| %>
+	<p>MENTEE: <%= mentee.user.name %></p>
+<% end %>
+
+<% if @mentees.empty? && @is_search_results %>
+  <p>No results found.</p>
+<% elsif @mentees.empty? %>
+  <p>No mentees to display.</p>
+<% end %>

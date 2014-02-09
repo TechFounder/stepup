@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
 
   has_one :mentor
   has_one :mentee
+  has_many :messages
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
