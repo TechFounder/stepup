@@ -15,4 +15,9 @@ class MenteesController < InheritedResources::Base
   	end
   end
 
+  private
+
+  def message_params
+    params.require(:message).permit(:message)
+  end
 end

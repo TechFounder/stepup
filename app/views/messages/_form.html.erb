@@ -1,10 +1,5 @@
-<h1>Contact Step It Up</h1>
-<hr>
-
 <%= simple_form_for [@message] do |f| %>
-  <%= f.input :subject %>
-  <%= f.input :text %>
+  <%= f.input :message %>
   <%= f.submit 'Send Message' %>
 
 <% end %>
-<hr>
