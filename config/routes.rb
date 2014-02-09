@@ -9,6 +9,8 @@ Stepup::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   ActiveAdmin.routes(self)
+
+  get 'mentors/search'
   
   get 'about' => "static_pages#about"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -22,6 +22,10 @@ body {
 	border: none;
 	min-height: 0px;
 }
+.navbar-right .subheading {
+	text-indent: 6px;
+	letter-spacing: 7px;
+}
 .navbar_logo {
 	height: 128px;	
 	float: left;
@@ -30,7 +34,9 @@ body {
 	float: right;
 }
 #header-navigation {
-	background: #E05A01;
+	background: #E05A01;	
+	padding-left: 50px;
+	padding-right: 40px;
 
 }
 #header-navigation a {
@@ -45,4 +51,23 @@ body {
 .navbar-nav > li > .dropdown-menu {
 	border-radius: 0px;
 	background: #333;
+}
+
+.panel-default {
+	width: 800px;
+	margin: 20px auto;
+
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#top_container {
+	padding: 20px 0;
+}
+#navbar_right {
+	margin: 0 auto;
+	margin-top: 20px;
 }
