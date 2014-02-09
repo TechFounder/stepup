@@ -21,7 +21,7 @@ class MentorsController < ApplicationController
 
   # POST /mentors
   def create
-    @mentor = current_user.mentors(discussion_params)
+    @mentor = current_user.mentors(mentor_params)
     @mentor.user = current_user
 
     if @mentor.save

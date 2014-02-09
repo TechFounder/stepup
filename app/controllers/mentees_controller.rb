@@ -25,7 +25,7 @@ class MenteesController < InheritedResources::Base
 
   # POST /mentees
   def create
-    @mentee = @article.mentees.build(mentee_params)
+    @mentee = current_user.mentees(mentee_params)
     @mentee.user = current_user
 
     if @mentee.save
