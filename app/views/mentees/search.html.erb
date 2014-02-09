@@ -1,17 +1,34 @@
-<h1>Mentee Search</h1>
 
-<%= form_tag(nil, method: :get) do %>
-  <p>You can search by LOTS OF STUFF.</p>
-	<%= text_field_tag "query" %>
-	<%= submit_tag 'Search' %>
-<% end %>
+<div class="mentee_search">
+	<h1>Find your Mentee</h1>
+
+	<%= form_tag(nil, method: :get) do %>
+		<%= text_field_tag "query" %>
+		<%= submit_tag 'Search' %>
+	<% end %>
+</div>
 
 <% @mentees.each do |mentee| %>
-	<p>MENTEE: <%= mentee.user.name %></p>
+	<div class="row search_results">
+	  <% if mentee.image_file_name %>
+		  <img src="<%= mentee.image(:thumb) %>" class="search_results_image">
+		<% else %>
+		  <div style="width:133px;height:100px;background-color:gray;float:left;" class="search_results_image"></div>
+		<% end %>
+		<h1><%= mentee.user.name %></h1>
+		<span>School: <b><%= mentee.school_name %></b></span><br/>
+		<span class="search_sector">Career Interests: <b><%= mentee.career_interests %></b> </span><br/>
+		<span class="search_skills">Bio: <b><%= mentee.bio %></b> </span>
+
+		<a href="<%= mentee_path(mentee) %>">
+		  <button type="button" class="btn btn-success view_profile_button">view profile</button>
+		</a>
+	</div>
 <% end %>
 
 <% if @mentees.empty? && @is_search_results %>
   <p>No results found.</p>
 <% elsif @mentees.empty? %>
-  <p>No mentees to display.</p>
+	<p></p>
+  <!--<p>No mentees to display.</p> -->
 <% end %>
