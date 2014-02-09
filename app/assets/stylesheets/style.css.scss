@@ -93,4 +93,14 @@ a:hover {
 	float:right;
 }
 
+.mentor_internship_available {
+	display:inline-block;
+	height: 26px;
+}
+label[for=mentor_internship_available] {
+	display: none;
+}
+.mentor_internship_job_title {
+	padding-top: 12px;
+}
 @import "footer";
