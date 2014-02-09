@@ -1,12 +1,13 @@
+
+
 <div class="mentor_search">
-<h1>Find your Mentor</h1>
+	<h1>Find your Mentor</h1>
 
-<%= form_tag(nil, method: :get) do %>
-	<%= text_field_tag "query", nil, placeholder: "Search for skill sets, sectors, companies, job titles.", id:"mentor_search_field" %>
-	<%= submit_tag 'Search' %>
-<% end %>
+	<%= form_tag(nil, method: :get) do %>
+		<%= text_field_tag "query" %>
+		<%= submit_tag 'Search' %>
+	<% end %>
 </div>
-
 
 <% @mentors.each do |mentor| %>
 	<div class="row search_results">

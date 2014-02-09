@@ -6,12 +6,6 @@
 <% else %>
 	<div class="jumbotron center">
 		<p>
-			<img src="http://placehold.it/760x150" />
-		</p>
-		<h1>I love jumbotron!</h1>
-		Click here to
-		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %><p></p>
-		<p>
 			<%= link_to user_omniauth_authorize_path(:twitter) do %>
 				<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect with Twitter</button>
 			<% end %>
@@ -24,3 +18,47 @@
 		</p>
 	</div>
 <% end %>
+
+<div class="row">
+	<div class="col-md-6" id="mission">
+		<div class="section_title">
+			<h1>Mission</h1>
+		</div>
+
+		<p class="mission_text">who we are</p>
+
+		<p>a nonprofit membership organization igniting women &amp; girls to fulfill their potential</p>
+		<br/>
+		<p class="mission_text">who we serve</p>
+
+		<p>we empower teen girls from under-resourced communities to be confident, college-bound, and career-ready, and propel professional women through connections, collaborations, and continuous development</p>
+	</div>
+
+	<div class="col-md-6" id="events">
+		<div class="section_title">
+			<h1>Events</h1>
+		</div>
+
+		<div class="event">
+			<h4>Step Up Open House for New Members & Members-to-Be</h4>
+			<span><i>1-28-2014 &nbsp;&nbsp; | &nbsp;&nbsp; 6:30pm - 8:30pm</i></span> 
+		</div>
+
+		<div class="event">
+			<h4>Pathways to Professions Mentoring Field Trip</h4>
+			<span><i>2-04-2014 &nbsp;&nbsp; | &nbsp;&nbsp; 4:15pm - 6:30pm</i></span> 
+		</div>
+
+		<div class="event">
+			<h4>Pathways to Professions Workshop</h4>
+			<span><i>2-08-2014 &nbsp;&nbsp; | &nbsp;&nbsp; 12:00pm - 2:00pm</i></span> 
+		</div>
+
+		<div class="event">
+			<h4>Step Up Open House for New Members & Members-to-Be</h4>
+			<span><i>2-28-2014 &nbsp;&nbsp; | &nbsp;&nbsp; 6:30pm - 8:30pm</i></span> 
+		</div>
+
+		<a href="#" class="view_all">View all</a>
+	</div>
+</div>
