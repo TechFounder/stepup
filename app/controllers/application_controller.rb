@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if resource.is_a?(User)
+    if resource.is_a?(User) && resource.profile_type.nil?
       choose_role_path
+    elsif resource.is_a?(User)
+      root_path
     else
       admin_dashboard_path
     end
