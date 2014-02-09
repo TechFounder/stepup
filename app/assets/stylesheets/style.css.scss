@@ -28,26 +28,7 @@ body {
 	padding: 20px 0;
 }
 
-#header_signup_button, #header_signin_button, #header_signout_button {
-	display:inline-block;
-	height:24px;
-	line-height: 0px;
-	margin-top: 8px;
-	font-weight:bold;
-	border-radius: 6px;
-}
-#header_signup_button {
-	color: orange;
-	background: white;
-}
-#header_signin_button {
-	color: white;
-	background: orange;
-}
-#header_signout_button {
-	color: white;
-	background: orange;
-}
+
 
 #header-navigation #header_signup_button {
 	color: orange;
@@ -59,4 +40,17 @@ a:hover {
 .btn-twitter:hover,.btn-google-plus:hover,.btn-facebook:hover {
 	color: orange;
 }
+
+.search_results img {
+	float:left;
+}
+
+.search_results h1 {
+	color: #E05A01;
+}
+
+.view_profile_button {
+	float:right;
+}
+
 @import "footer";

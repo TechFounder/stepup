@@ -30,4 +30,27 @@
 
 }
 
+#header_signup_button, #header_signin_button, #header_signout_button {
+	display:inline-block;
+	height:24px;
+	line-height: 0px;
+	margin-top: 8px;
+	font-weight:bold;
+	border-radius: 6px;
+}
+#header_signup_button {
+	color: orange;
+	background: white;
+}
+#header_signin_button {
+	color: white;
+	background: orange;
+}
+#header_signout_button {
+	color: white;
+	background: orange;
+}
+
+@import "forms";
+
 @import "navbar";

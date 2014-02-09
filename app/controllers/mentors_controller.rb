@@ -77,4 +77,5 @@ class MentorsController < ApplicationController
                                      :internship_additional_info, 
                                      :image)
     end
+
 end
