@@ -8,6 +8,8 @@ Stepup::Application.routes.draw do
   get 'mentors/edit'
   resources :mentors
 
+  get 'mentees' => 'mentees#search'
+  get 'mentees/edit'
   get 'mentees/search'
   resources :mentees do
   end
