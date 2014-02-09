@@ -10,5 +10,5 @@ class MentorsController < ApplicationController
   		@mentors = Mentor.all
   	end
   end
-
+  
 end
