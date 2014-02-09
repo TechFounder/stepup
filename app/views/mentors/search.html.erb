@@ -11,14 +11,20 @@
 
 <% @mentors.each do |mentor| %>
 	<div class="row search_results">
-		<img src="https://s3.amazonaws.com/stepupnow/profile_pic.jpg">
-		<h1>Cynthia Newman</h1>
-		<span>President / CEO</span>
+	  <% if mentor.image_file_name %>
+		  <img src="<%= mentor.image_file_name %>">
+		<% else %>
+		  <div style="width:100px;height:100px;background-color:gray;float:left;" class="search_results_image"></div>
+		<% end %>
+		<h1><%= mentor.user.name %></h1>
+		<span><%= mentor.job_title %></span>
 
-		<span class="search_sector">Sector: <b>Accounting</b> </span>
-		<span class="search_skills">Skills: <b>Audits, Banking</b> </span>
+		<span class="search_sector">Sector: <b><%= mentor.sector %></b> </span>
+		<span class="search_skills">Skills: <b><%= mentor.skill_set %></b> </span>
 
-		<button type="button" class="btn btn-success view_profile_button">view profile</button>
+		<a href="<%= mentor_path(mentor) %>">
+		  <button type="button" class="btn btn-success view_profile_button">view profile</button>
+		</a>
 	</div>
 <% end %>
 
