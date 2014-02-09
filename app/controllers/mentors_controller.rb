@@ -68,9 +68,6 @@ class MentorsController < ApplicationController
                                        :internship_job_title, 
                                        :internship_skill_set, 
                                        :internship_additional_info, 
-                                       :image_file_name, 
-                                       :image_content_type, 
-                                       :image_file_size, 
-                                       :image_updated_at)
+                                       :image)
       end
 end
