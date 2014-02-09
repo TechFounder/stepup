@@ -29,9 +29,10 @@ class User < ActiveRecord::Base
   # scope :mentor, -> { where(is_mentor: true) }
   # scope :mentee, -> { where(is_mentor: false) }
 
-  has_one :mentor
-  has_one :mentee
-  has_many :messages
+  belongs_to :profile, polymorphic: true
+  has_many :messages, dependent: :destroy
+
+  validates :name, presence: true
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|

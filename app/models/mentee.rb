@@ -19,5 +19,5 @@
 #
 
 class Mentee < ActiveRecord::Base
-  belongs_to :user
+  has_one :user, as: :profile, dependent: :destroy
 end

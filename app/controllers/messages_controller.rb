@@ -19,7 +19,7 @@ class MessagesController < InheritedResources::Base
   private
 
   def message_params
-    params.require(:message).permit(:subject, :text)
+    params.require(:message).permit(:message)
   end
 
 end

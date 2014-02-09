@@ -28,9 +28,28 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b></b></a>
+          <% if !user_signed_in? %>
+            <%= link_to "Sign up", new_user_registration_path, 
+              class: "btn btn-default btn-xs",
+              role: "button", 
+              id:"header_signup_button" %>
+            <%= link_to "Sign In", 
+              new_user_session_path, 
+              class: "btn btn-default btn-xs", 
+                role: "button", 
+                id:"header_signin_button" %>
+          <% else %>
+            <%= link_to "Sign Out", 
+              destroy_user_session_path, 
+              class: "btn btn-default btn-xs", 
+                role: "button", 
+                id:"header_signout_button",
+                method: :delete %>
+          <% end %>
+
           <ul class="dropdown-menu">
             <% unless user_signed_in? %>
+
               <li><%= link_to "profile", new_user_session_path %></li>
               <li><%= link_to "sign out", new_user_session_path %></li>
             <% else %>
