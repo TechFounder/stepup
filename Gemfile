@@ -6,7 +6,6 @@ gem 'devise', '3.2.1'
 gem 'simple_form', '~> 3.0.1'
 gem 'annotate', ">=2.5.0"
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'mailcatcher'
 
 # Omniauth gems
 gem 'omniauth'
@@ -52,6 +51,7 @@ group :development, :test do
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'figaro', '0.7.0'
+gem 'mailcatcher'
 end
 
 group :doc do
