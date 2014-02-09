@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 20140209152340) do
     t.string   "internship_job_title"
     t.text     "internship_skill_set"
     t.text     "internship_additional_info"
-    t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -80,8 +79,6 @@ ActiveRecord::Schema.define(version: 20140209152340) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "mentors", ["user_id"], name: "index_mentors_on_user_id"
 
   create_table "messages", force: true do |t|
     t.integer  "user_id"
