@@ -43,25 +43,15 @@
                 role: "button", 
                 id:"header_signin_button" %>
           <% else %>
-            <%= link_to "Sign Out", 
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b></b></a>
+          <ul class="dropdown-menu">
+              <li><%= link_to "profile", new_user_session_path %></li>
+              <li><%= link_to "sign out", 
               destroy_user_session_path, 
-              class: "btn btn-default btn-xs", 
-                role: "button", 
-                id:"header_signout_button",
-                method: :delete %>
+                method: :delete %></li>
+          </ul>          
           <% end %>
 
-          <ul class="dropdown-menu">
-            <% unless user_signed_in? %>
-
-              <li><%= link_to "profile", new_user_session_path %></li>
-              <li><%= link_to "sign out", new_user_session_path %></li>
-            <% else %>
-              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-              <li class="divider"></li>
-              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-            <% end %>
-          </ul>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
