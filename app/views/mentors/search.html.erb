@@ -7,7 +7,7 @@
 <% end %>
 
 <% @mentors.each do |mentor| %>
-	<p>MENTOR: <%= mentor.name %></p>
+	<p>MENTOR: <%= mentor.user.name %></p>
 <% end %>
 
 <% if @mentors.empty? && @is_search_results %>
