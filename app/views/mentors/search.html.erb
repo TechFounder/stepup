@@ -1,13 +1,23 @@
-<h1>Mentor Search</h1>
+<div class="mentor_search">
+	<h1>Find your Mentor</h1>
 
-<%= form_tag(nil, method: :get) do %>
-  <p>You can search by company, skills or industry to find mentors which match your interests.</p>
-	<%= text_field_tag "query" %>
-	<%= submit_tag 'Search' %>
-<% end %>
+	<%= form_tag(nil, method: :get) do %>
+		<%= text_field_tag "query" %>
+		<%= submit_tag 'Search' %>
+	<% end %>
+</div>
 
 <% @mentors.each do |mentor| %>
-	<p>MENTOR: <%= mentor.user.name %></p>
+	<div class="row search_results">
+		<img src="">
+		<h1>Cynthia Newman</h1>
+		<span>President / CEO</span>
+
+		<span class="search_sector">Sector: <b>Accounting</b> </span>
+		<span class="search_skills">Skills: <b>Audits, Banking</b> </span>
+
+		<button type="button" class="btn btn-success view_profile_button">view profile</button>
+	</div>
 <% end %>
 
 <% if @mentors.empty? && @is_search_results %>
