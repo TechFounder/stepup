@@ -21,7 +21,7 @@ class MentorsController < ApplicationController
 
   # GET /mentors/1/edit
   def edit
-    if current_user.profile && current_user.profile.class == 'Mentor'
+    if current_user.profile_type == 'Mentor'
       @mentor = current_user.profile
     else
       @mentor = Mentor.new
@@ -30,8 +30,7 @@ class MentorsController < ApplicationController
 
   # POST /mentors
   def create
-    # raise params[:mentor].to_json
-    mentor = Mentor.new(params[:mentor])
+    mentor = Mentor.new(mentor_params)
     if mentor.save
       current_user.profile.destroy! if current_user.profile
       current_user.profile = mentor
@@ -44,8 +43,9 @@ class MentorsController < ApplicationController
 
   # PATCH/PUT /mentors/1
   def update
-    if @mentor.update(mentor_params)
-      redirect_to @mentor, notice: 'Your profile was successfully updated.'
+    @mentor = Mentor.find(params[:id])
+    if @mentor.update_attributes(mentor_params)
+      redirect_to root_path, notice: 'Your profile was successfully updated.'
     else
       render action: 'edit'
     end
