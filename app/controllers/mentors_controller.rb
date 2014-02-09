@@ -1,10 +1,6 @@
 class MentorsController < ApplicationController
 	before_filter :authenticate_user!
 
-  def index
-    @mentors = Mentor.all
-  end
-
   def search
   	if params[:query]
   		query = "%" + params[:query] + "%"
