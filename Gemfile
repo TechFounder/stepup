@@ -44,7 +44,7 @@ gem 'turbolinks'
 # Gems used only for Production
 group :production do
 gem 'pg'
-gem 'rails_12factor'
+# gem 'rails_12factor'
 end
 
 #Gems used for Development and Testing
