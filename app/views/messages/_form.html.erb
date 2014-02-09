@@ -1,12 +1,10 @@
-<%= simple_form_for(@message) do |f| %>
-  <%= f.error_notification %>
+<h1>Contact Step It Up</h1>
+<hr>
 
-  <div class="form-inputs">
-    <%= f.input :user_id %>
-    <%= f.input :message %>
-  </div>
+<%= simple_form_for [@message] do |f| %>
+  <%= f.input :subject %>
+  <%= f.input :text %>
+  <%= f.submit 'Send Message' %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
 <% end %>
+<hr>
