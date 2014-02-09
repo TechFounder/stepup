@@ -24,4 +24,6 @@
 
 class Mentor < ActiveRecord::Base
 	has_one :user, as: :profile, dependent: :destroy
+
+	validates :company_name, presence: true
 end
