@@ -70,3 +70,25 @@ body {
 	margin: 0 auto;
 	margin-top: 20px;
 }
+
+#header_signup_button, #header_signin_button {
+	display:inline-block;
+	height:24px;
+	line-height: 0px;
+	margin-top: 8px;
+	font-weight:bold;
+	border-radius: 6px;
+}
+#header_signup_button {
+	color: orange;
+	background: white;
+}
+#header_signin_button {
+	color: white;
+	background: orange;
+}
+
+#header-navigation #header_signup_button {
+	color: orange;
+
+}
