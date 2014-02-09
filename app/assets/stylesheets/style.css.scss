@@ -12,46 +12,7 @@ body {
      text-align: center;
 }
 
-.navbar-brand {
-     font-weight: bold;
-}
-
-.navbar {
-	margin-bottom: 0px;
-	border-radius: 0px;
-	border: none;
-	min-height: 0px;
-}
-
-.navbar-right .subheading {
-	text-indent: 6px;
-	letter-spacing: 7px;
-}
-
-.navbar_logo {
-	height: 128px;	
-	float: left;
-}
-.navbar_rightrail {
-	float: right;
-}
-#header-navigation {
-	background: #E05A01;	
-	padding-left: 50px;
-	padding-right: 40px;
-}
-#header-navigation a {
-	color: #fff;
-}
-
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-	background: #333;
-}
-
-.navbar-nav > li > .dropdown-menu {
-	border-radius: 0px;
-	background: #333;
-}
+@import "header";
 
 .panel-default {
 	width: 800px;
@@ -66,63 +27,11 @@ body {
 #top_container {
 	padding: 20px 0;
 }
-#navbar_right {
-	margin: 0 auto;
-	margin-top: 20px;
-}
 
-#header_signup_button, #header_signin_button {
-	display:inline-block;
-	height:24px;
-	line-height: 0px;
-	margin-top: 8px;
-	font-weight:bold;
-	border-radius: 6px;
-}
-#header_signup_button {
-	color: orange;
-	background: white;
-}
-#header_signin_button {
-	color: white;
-	background: orange;
-}
-
-#header-navigation #header_signup_button {
-	color: orange;
-
-}
 a:hover {
 	text-decoration:none;
 }
 .btn-twitter:hover,.btn-google-plus:hover,.btn-facebook:hover {
 	color: orange;
 }
-.footer_copyright_links {
-	padding-left: 0px;
-	font-size:12px;
-}
-.footer_copyright_links li.copyright {
-	margin-right: 16px;
-}
-.footer_copyright_links li {
-	list-style-type: none;
-	display: inline-block;
-	margin-right: 8px;
-}
-#footer_signup {
-	width: 300px;
-}
-#footer_email_field {
-	display:inline-block;
-	width: 150px;
-	margin-right: 16px;
-}
-#footer_signup_btn {
-	display: inline-block;
-}
-#footer-navigation {
-	background: #333;
-	color: white;
-	padding-top:30px;
-}
+@import "footer";

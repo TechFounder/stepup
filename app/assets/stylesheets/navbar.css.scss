@@ -1,0 +1,38 @@
+.navbar-brand {
+     font-weight: bold;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0px;
+	border: none;
+	min-height: 0px;
+}
+
+.navbar-right .subheading {
+	text-indent: 6px;
+	letter-spacing: 7px;
+}
+
+.navbar_logo {
+	height: 128px;	
+	float: left;
+}
+.navbar_rightrail {
+	float: right;
+}
+
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	background: #333;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	border-radius: 0px;
+	background: #333;
+}
+
+#navbar_right {
+	margin: 0 auto;
+	margin-top: 20px;
+}

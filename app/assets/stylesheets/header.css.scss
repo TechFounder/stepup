@@ -1,0 +1,33 @@
+#header-navigation {
+	background: #E05A01;	
+	padding-left: 50px;
+	padding-right: 40px;
+}
+#header-navigation a {
+	color: #fff;
+}
+
+
+#header_signup_button, #header_signin_button {
+	display:inline-block;
+	height:24px;
+	line-height: 0px;
+	margin-top: 8px;
+	font-weight:bold;
+	border-radius: 6px;
+}
+#header_signup_button {
+	color: orange;
+	background: white;
+}
+#header_signin_button {
+	color: white;
+	background: orange;
+}
+
+#header-navigation #header_signup_button {
+	color: orange;
+
+}
+
+@import "navbar";
