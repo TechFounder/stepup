@@ -2,6 +2,7 @@ Stepup::Application.routes.draw do
   resources :messages
 
   get 'mentors/search'
+  get 'mentors/edit'
   resources :mentors
 
   get 'mentees/search'

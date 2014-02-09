@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209060417) do
+ActiveRecord::Schema.define(version: 20140209152340) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20140209060417) do
     t.string   "bio"
     t.string   "events_attended"
     t.string   "extracurriculars"
-    t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -61,8 +60,6 @@ ActiveRecord::Schema.define(version: 20140209060417) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "mentees", ["user_id"], name: "index_mentees_on_user_id"
 
   create_table "mentors", force: true do |t|
     t.string   "company_name"
