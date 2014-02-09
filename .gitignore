@@ -25,5 +25,3 @@ doc/
 
 # Ignore Paperclip uploaded files
 /public/system
-
-Gemfile.lock
