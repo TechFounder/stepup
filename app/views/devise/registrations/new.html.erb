@@ -1,5 +1,5 @@
 <div class="panel panel-default center-block">
-<div class="panel-heading">Sign up</div>
+<div class="panel-heading">Step Up Women's Network Sign up</div>
 <div class="panel-body">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <% if resource.errors.any? %>
@@ -13,18 +13,20 @@
     </div>
   <% end %>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name, :autofocus => true %></div>
+  <div><%= f.text_field :name, :autofocus => true, placeholder: "Enter Name" %></div>
+  <br />
 
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email %></div>
+  <div><%= f.email_field :email, placeholder: "Enter Email" %></div>
+  <br />
 
   <% if f.object.password_required? %>
-    <div><%= f.label :password %><br />
-    <%= f.password_field :password %></div>
+    <div>
+    <%= f.password_field :password, placeholder: "Password" %></div>
+    <br />
 
-    <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
+    <div>
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %></div>
+    <br />
   <% end %>
   <br />
   <div><%= f.submit "Sign up", class: "btn btn-primary btn-sm" %></div>

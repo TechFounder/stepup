@@ -22,8 +22,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Internship", mentees_search_path %></li>
-        <li><%= link_to "Mentor Search", mentors_search_path %></li>
+        <% if user_signed_in? && current_user.profile_type %>
+          <% if current_user.profile_type == "Mentee" %>
+            <li><%= link_to "Mentor Search", mentors_search_path %></li>
+          <% else %>
+            <li><%= link_to "Mentee Search", mentees_search_path %></li>
+          <% end %>
+        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

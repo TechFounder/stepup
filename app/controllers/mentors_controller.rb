@@ -13,6 +13,7 @@ class MentorsController < ApplicationController
   
   # GET /mentors/1
   def show
+    @mentor = Mentor.find(params[:id])
   end
 
   # GET /mentors/1/edit

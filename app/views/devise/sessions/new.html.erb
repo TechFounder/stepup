@@ -1,5 +1,5 @@
 <div class="panel panel-default center-block">
-<div class="panel-heading">Sign In</div>
+<div class="panel-heading">Step Up Women's Nework Sign In</div>
 <div class="panel-body">
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -14,11 +14,12 @@
 		</div>
 	<% end %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div>
+  <%= f.email_field :email, placeholder:"Email" %></div>
+  <br />
+  <div>
+  <%= f.password_field :password,placeholder:"Password" %></div>
+  <br />
 
   <% if devise_mapping.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
