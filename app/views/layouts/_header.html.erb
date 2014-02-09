@@ -28,11 +28,10 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <%= link_to "Sign up", new_registration_path(resource_name), 
+          <%= link_to "Sign up", new_user_registration_path, 
             class: "btn btn-default btn-xs",
             role: "button", 
-            id:"header_signup_button"
-              %>
+            id:"header_signup_button" %>
           <%= link_to "Sign In", 
             new_user_session_path, 
             class: "btn btn-default btn-xs", 
