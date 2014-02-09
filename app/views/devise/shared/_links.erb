@@ -21,23 +21,18 @@
 </div>
 <div class="panel-footer">
 <%- if devise_mapping.omniauthable? %>
-	<div class="row">
-		<div class="col-md-4">
+
+	<p style="margin:0 auto;width:600px;">
 		<%= link_to user_omniauth_authorize_path(:twitter) do %>
 			<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect with Twitter</button>
 		<% end %>
-		</div>
-		<div class="col-md-4">		
 		<%= link_to user_omniauth_authorize_path(:facebook) do %>
 			<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect with Facebook</button>
 		<% end %>
-		</div>
-		<div class="col-md-4">		
 		<%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
 			<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect with Google+</button>
 		<% end %>
-		</div>
-	</div>
+	</p>
 <% end -%>
 </div>
 </div>
