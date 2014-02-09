@@ -5,12 +5,12 @@ class UserMailer < ActionMailer::Base
     @user = message.user
     @text = message.text
 
-    mail to: @product_owner.email,
+    mail to: (email),
     from: @user.email,
     subject: message.subject,
     text: message.text
 
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+    mail(to: @user.email, subject: 'Interest Expressed on ')
  end
 
 end
