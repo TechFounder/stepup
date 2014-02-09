@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def choose_role
+  end
+
+  def after_sign_in_path_for(resource)
+  	choose_role_path
+	end
+
  protected
 
  def configure_permitted_parameters

@@ -1,14 +1,17 @@
 Stepup::Application.routes.draw do
   resources :messages
 
+  get 'choose_role' => 'application#choose_role', as: 'choose_role'
+
   get 'mentors' => 'mentors#search'
   get 'mentors/search'
   get 'mentors/edit'
   resources :mentors
 
+  get 'mentees' => 'mentees#search'
+  get 'mentees/edit'
   get 'mentees/search'
   resources :mentees do
-    resources :messages, only: [:create, :new]
   end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
