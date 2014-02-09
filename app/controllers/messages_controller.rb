@@ -1,4 +1,4 @@
-class MessagesController < InheritedResources::Base
+class MessagesController < ApplicationController
 
  def new
     @message = Message.new
@@ -9,7 +9,7 @@ class MessagesController < InheritedResources::Base
     @message.user = current_user
 
     if @message.save
-      UserMailer.contact_seller_email(@message).deliver
+      # UserMailer.contact_seller_email(@message).deliver
       redirect_to :back, notice: 'Your email is sent! Thank You!'
     else
       render :new
