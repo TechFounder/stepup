@@ -10,7 +10,6 @@ Stepup::Application.routes.draw do
 
   get 'mentees/search'
   resources :mentees do
-    resources :messages, only: [:create, :new]
   end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
