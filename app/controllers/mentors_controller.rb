@@ -21,17 +21,24 @@ class MentorsController < ApplicationController
 
   # GET /mentors/1/edit
   def edit
+    if current_user.profile && current_user.profile.class == 'Mentor'
+      @mentor = current_user.profile
+    else
+      @mentor = Mentor.new
+    end
   end
 
   # POST /mentors
   def create
-    @mentor = current_user.mentors(mentor_params)
-    @mentor.user = current_user
-
-    if @mentor.save
-      redirect_to @mentor, notice: 'Your profile was successfully created.'
+    # raise params[:mentor].to_json
+    mentor = Mentor.new(params[:mentor])
+    if mentor.save
+      current_user.profile.destroy! if current_user.profile
+      current_user.profile = mentor
+      current_user.save!
+      redirect_to root_path, notice: 'Your profile was successfully created.'
     else
-      render action: 'new'
+      render action: 'edit'
     end
   end
 
@@ -50,24 +57,25 @@ class MentorsController < ApplicationController
     redirect_to mentors_url, notice: 'Your profile was successfully deleted.'
   end
 
-    private
-      # Returns the correct article to mentor
-      def find_article
-        @mentor = Mentor.find(params[:id])
-      end  
+  private
+    # Returns the correct article to mentor
+    def find_article
+      @mentor = Mentor.find(params[:id])
+    end  
 
-      # Only allow a trusted parameter "white list" through.
-      def mentor_params
-        params.require(:mentor).permit(:company_name, 
-                                       :job_title, 
-                                       :sector, 
-                                       :college, 
-                                       :skill_set, 
-                                       :additional_info, 
-                                       :internship_available, 
-                                       :internship_job_title, 
-                                       :internship_skill_set, 
-                                       :internship_additional_info, 
-                                       :image)
-      end
+    # Only allow a trusted parameter "white list" through.
+    def mentor_params
+      params.require(:mentor).permit(:company_name, 
+                                     :job_title, 
+                                     :sector, 
+                                     :college, 
+                                     :skill_set, 
+                                     :additional_info, 
+                                     :internship_available, 
+                                     :internship_job_title, 
+                                     :internship_skill_set, 
+                                     :internship_additional_info, 
+                                     :image)
+    end
+
 end
