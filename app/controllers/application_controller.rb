@@ -9,7 +9,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-  	choose_role_path
+    if resource.is_a?(User)
+      choose_role_path
+    else
+      admin_dashboard_path
+    end
+  	
 	end
 
  protected
