@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MentorsControllerTest < ActionController::TestCase
-<<<<<<< HEAD
+
   setup do
     @mentor = mentors(:one)
   end
@@ -47,11 +47,5 @@ class MentorsControllerTest < ActionController::TestCase
 
     assert_redirected_to mentors_path
   end
-=======
-  test "should get search" do
-    get :search
-    assert_response :success
-  end
 
->>>>>>> b38bdda409368f885c20a155405578bfb69fdf97
 end
