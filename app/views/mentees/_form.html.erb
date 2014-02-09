@@ -1,4 +1,4 @@
-<%= simple_form_for(@mentee) do |f| %>
+<%= simple_form_for(@mentee, :html => { :multipart => true }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -6,6 +6,9 @@
     <%= f.input :grade %>
     <%= f.input :career_interests %>
     <%= f.input :bio %>
+    <%= f.input :events_attended %>
+    <%= f.input :extracurriculars %>
+    Image: <%= f.file_field :image %>
   </div>
 
   <div class="form-actions">
