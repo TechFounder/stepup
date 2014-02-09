@@ -1,5 +1,6 @@
-<h2>Sign up</h2>
-
+<div class="panel panel-default center-block">
+<div class="panel-heading">Sign up</div>
+<div class="panel-body">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <% if resource.errors.any? %>
     <div class="alert alert-info">
@@ -28,5 +29,6 @@
   <br />
   <div><%= f.submit "Sign up", class: "btn btn-primary btn-sm" %></div>
 <% end %>
+
 
 <%= render "devise/shared/links" %>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
+  <div class="container" id="top_container">
   <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,11 +9,11 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/logo.jpg"), {class:"navbar-header visible-lg visible-md"} %>
-    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/logo.jpg"), { width: "160", class:"navbar-header visible-sm"} %>    
+    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/logo.jpg"), {width: "256",class:"navbar-header visible-lg visible-md", id:"navbar_logo"} %>
+    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/logo.jpg"), { width: "160", class:"navbar-header visible-sm", id:"navbar_logo"} %>    
     <div class="navbar-right">
-    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/connecting_image.jpg"), {class:"visible-lg visible-md"} %>
-    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/connecting_image.jpg"), {width: "300",class:"visible-sm"} %>
+    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/connecting_image.jpg"), {width:"300",class:"visible-lg visible-md", id:"navbar_right"} %>
+    <%= image_tag asset_path("https://s3.amazonaws.com/stepupnow/connecting_image.jpg"), {width: "300",class:"visible-sm", id:"navbar_right"} %>
 
     <p class="subheading">CONNECTING WOMEN TO OPPORTUNITIES</p>
   </div>
