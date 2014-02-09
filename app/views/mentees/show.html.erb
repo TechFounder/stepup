@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School name:</strong>
+  <%= @mentee.school_name %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @mentee.grade %>
+</p>
+
+<p>
+  <strong>Career interests:</strong>
+  <%= @mentee.career_interests %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @mentee.bio %>
+</p>
+
+<%= link_to 'Edit', edit_mentee_path(@mentee) %> |
+<%= link_to 'Back', mentees_path %>

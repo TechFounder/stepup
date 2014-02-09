@@ -1,0 +1,14 @@
+<%= simple_form_for(@mentee) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :school_name %>
+    <%= f.input :grade %>
+    <%= f.input :career_interests %>
+    <%= f.input :bio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

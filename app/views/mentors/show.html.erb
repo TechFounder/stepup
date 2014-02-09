@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @mentor.company_name %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @mentor.job_title %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @mentor.sector %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @mentor.college %>
+</p>
+
+<p>
+  <strong>Skill set:</strong>
+  <%= @mentor.skill_set %>
+</p>
+
+<p>
+  <strong>Additional info:</strong>
+  <%= @mentor.additional_info %>
+</p>
+
+<p>
+  <strong>Internship available:</strong>
+  <%= @mentor.internship_available %>
+</p>
+
+<p>
+  <strong>Internship job title:</strong>
+  <%= @mentor.internship_job_title %>
+</p>
+
+<p>
+  <strong>Internship skill set:</strong>
+  <%= @mentor.internship_skill_set %>
+</p>
+
+<p>
+  <strong>Internship additional info:</strong>
+  <%= @mentor.internship_additional_info %>
+</p>
+
+<%= link_to 'Edit', edit_mentor_path(@mentor) %> |
+<%= link_to 'Back', mentors_path %>

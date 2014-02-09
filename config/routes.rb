@@ -1,4 +1,10 @@
 Stepup::Application.routes.draw do
+  resources :messages
+
+  resources :mentors
+
+  resources :mentees
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
