@@ -15,9 +15,58 @@ class MenteesController < InheritedResources::Base
   	end
   end
 
-  private
-
-  def message_params
-    params.require(:message).permit(:message)
+  # GET /mentees/1
+  def show
   end
+
+  # GET /mentees/1/edit
+  def edit
+  end
+
+  # POST /mentees
+  def create
+    @mentee = current_user.mentees(mentee_params)
+    @mentee.user = current_user
+
+    if @mentee.save
+      redirect_to @mentee, notice: 'Your profile was successfully created.'
+    else
+      render action: 'new'
+    end
+  end
+
+  # PATCH/PUT /mentees/1
+  def update
+    if @mentee.update(mentee_params)
+      redirect_to @mentee, notice: 'Your profile was successfully updated.'
+    else
+      render action: 'edit'
+    end
+  end
+
+  # DELETE /mentees/1
+  def destroy
+    @mentee.destroy
+    redirect_to mentees_url, notice: 'Your profile was successfully deleted.'
+  end
+
+    private
+      # Returns the correct article to mentee
+      def find_article
+        @article = Article.find(params[:id])
+      end  
+
+      # Only allow a trusted parameter "white list" through.
+      def mentee_params
+        params.require(:mentee).permit(:school_name, 
+                                       :grade, 
+                                       :career_interests, 
+                                       :bio, 
+                                       :events_attended, 
+                                       :extracurriculars, 
+                                       :image_file_name, 
+                                       :image_content_type, 
+                                       :image_file_size, 
+                                       :image_updated_at)
+      end
 end
