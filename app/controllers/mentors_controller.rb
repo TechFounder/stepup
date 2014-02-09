@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 class MentorsController < InheritedResources::Base
+=======
+class MentorsController < ApplicationController
+>>>>>>> 40f9b1de46c79f253dddee0de96cfb2539b8080f
 	before_filter :authenticate_user!
 
   def search
@@ -10,4 +14,8 @@ class MentorsController < InheritedResources::Base
   		@mentors = User.mentor
   	end
   end
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 40f9b1de46c79f253dddee0de96cfb2539b8080f
 end
