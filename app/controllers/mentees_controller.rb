@@ -25,24 +25,31 @@ class MenteesController < InheritedResources::Base
 
   # GET /mentees/1/edit
   def edit
+    if current_user.profile_type == 'Mentee'
+      @mentee = current_user.profile
+    else
+      @mentee = Mentee.new
+    end
   end
 
   # POST /mentees
   def create
-    @mentee = current_user.mentees(mentee_params)
-    @mentee.user = current_user
-
+    @mentee = Mentee.new(mentee_params)
     if @mentee.save
-      redirect_to @mentee, notice: 'Your profile was successfully created.'
+      current_user.profile.destroy! if current_user.profile
+      current_user.profile = @mentee
+      current_user.save!
+      redirect_to root_path, notice: 'Your profile was successfully created.'
     else
-      render action: 'new'
+      render action: 'edit'
     end
   end
 
   # PATCH/PUT /mentees/1
   def update
-    if @mentee.update(mentee_params)
-      redirect_to @mentee, notice: 'Your profile was successfully updated.'
+    @mentee = Mentee.find(params[:id])
+    if @mentee.update_attributes(mentee_params)
+      redirect_to root_path, notice: 'Your profile was successfully updated.'
     else
       render action: 'edit'
     end
