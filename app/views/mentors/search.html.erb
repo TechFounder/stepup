@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<h1>Find your Mentor</h1>
+
+<%= form_tag(nil, method: :get) do %>
+	<%= text_field_tag "query", nil, placeholder: "Search for skill sets, sectors, companies, job titles.", id:"mentor_search_field" %>
+	<%= submit_tag 'Search' %>
+<% end %>
+=======
 <div class="mentor_search">
 	<h1>Find your Mentor</h1>
 
@@ -6,6 +14,7 @@
 		<%= submit_tag 'Search' %>
 	<% end %>
 </div>
+>>>>>>> 153e34950cfb16ae61e568b81c9ddfaed8b8e9c4
 
 <% @mentors.each do |mentor| %>
 	<div class="row search_results">
@@ -23,5 +32,6 @@
 <% if @mentors.empty? && @is_search_results %>
   <p>No results found.</p>
 <% elsif @mentors.empty? %>
-  <p>No mentors to display.</p>
+	<p></p>
+  <!--<p>No mentors to display.</p> -->
 <% end %>
