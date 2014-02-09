@@ -1,6 +1,10 @@
 class MenteesController < InheritedResources::Base
 	before_filter :authenticate_user!
 
+  def index
+    @mentees = Mentee.all
+  end
+
   def search
   	if params[:query]
   		query = "%" + params[:query] + "%"
@@ -64,9 +68,6 @@ class MenteesController < InheritedResources::Base
                                        :bio, 
                                        :events_attended, 
                                        :extracurriculars, 
-                                       :image_file_name, 
-                                       :image_content_type, 
-                                       :image_file_size, 
-                                       :image_updated_at)
+                                       :image)
       end
 end
