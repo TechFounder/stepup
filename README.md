@@ -32,3 +32,4 @@ We built a web app for *Step Up Women's Network* with Rails 4 and Bootstrap 3 al
 - aws-sdk
 
 The app focused on the need of of the organization's need for Mentors and Mentees to connect online.
+You can see the site deployed on Heroku: [Step Up](stepup-staging.herokuapp.com)

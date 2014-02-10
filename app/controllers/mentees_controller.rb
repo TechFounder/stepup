@@ -1,4 +1,4 @@
-class MenteesController < InheritedResources::Base
+class MenteesController < ApplicationController
 	before_filter :authenticate_user!
 
   def index
@@ -21,11 +21,7 @@ class MenteesController < InheritedResources::Base
 
   # GET /mentees/1
   def show
-  end
-
-  def show
     @mentee = Mentee.find(params[:id])
-    # @message = @mentee.messages.build
   end
 
   # GET /mentees/1/edit
