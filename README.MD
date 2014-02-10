@@ -13,10 +13,10 @@ Participants listened to the needs of the orgainzations and built a mobile or we
 
 Our team consisted of myself and
 
-- Krystle Bates https://github.com/krebates
-- Dan Madere https://github.com/dgmdan
-- Sze Chan https://github.com/schanxogrp
-- Brandon Diaz https://github.com/brandond424
+- [Krystle Bates](https://github.com/krebates)
+- [Dan Madere](https://github.com/dgmdan)
+- [Sze Chan](https://github.com/schanxogrp)
+- [Brandon Diaz](https://github.com/brandond424)
 
 We built a web app for *Step Up Women's Network* with Rails 4 and Bootstrap 3 along with the following gems:
 
